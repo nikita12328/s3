@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block title %}
+        {% if context %}
+            <title>{{ context.title }}</title>
+        {% else %}
+            <title>Flask Course</title>
+        {% endif %}
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        {% block navigation %}
+            <nav class="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="{{ url_for('index') }}">home</a></li>
+                    {% if session.logged_user %}
+                        <li class="nav-item"><a href="{{ url_for('logout') }}">logout</a></li>
+                    {% else %}
+                        <li class="nav-item"><a href="{{ url_for('login') }}">login</a></li>
+                    {% endif %}
+                    <li class="nav-item"><a href="{{ url_for('about') }}">about</a></li>
+                </ul>
+            </nav>
+        {% endblock %}
+    </header>
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        {% block footer %}
+            <p>&copy; 2023 XumpocmbDev</p>
+        {% endblock %}
+    </footer>
+</div>
+</body>
+</html>
