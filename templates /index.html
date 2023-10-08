@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-{{ category }} text-center">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </p>
+
+    <div class="container-centered">
+        <h1>{{ context.title }}</h1>
+    </div>
+
+{% endblock %}
