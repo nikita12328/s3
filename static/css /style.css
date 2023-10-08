@@ -1,0 +1,227 @@
+/* Общие стили */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #343a40;
+    color: #C0C0C0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: underline;
+    color: #e1e1e1;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d72c4e;
+    transition: color 0.3s;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-centered {
+    max-width: 90%;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Стили для горизонтального меню */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 20px;
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #adadad;
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    color: #d72c4e;
+    transition: color 0.3s;
+}
+
+/* Стили для формы */
+.form-contact {
+    max-width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #444444;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-contact label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-contact input[type=text], input[type=password], input[type=email] {
+    background: #ffffff !important;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+.form-contact input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    background: #ffffff !important;
+    outline: 2px solid #71caff;
+    border-radius: 20px;
+}
+
+.form-contact textarea {
+    background: #ffffff !important;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    resize: none;
+    font-size: 18px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-contact textarea:focus {
+    background: #ffffff !important;
+    outline: 2px solid #71caff;
+}
+
+.form-contact input[type=submit] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.form-contact input[type=submit]:hover {
+    background-color: #0056b3;
+}
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 420px;
+}
+
+.product-card {
+    width: 220px; /* 4 карточки товаров в одном ряду */
+    height: 400px;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #cfcfff;
+    margin: 2px;
+}
+
+.product-card img {
+    max-width: 100%;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.pagination {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pagination ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pagination ul li a:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #333;
+    color: #C0C0C0;
+    text-align: center;
+}
+
+.flash-success {
+    margin: 20px;
+    color: #333333;
+    background-color: #82ff82;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.flash-error {
+    margin: 20px;
+    color: #333333;
+    background-color: #ff8282;
+    border-radius: 20px;
+    padding: 5px;
+}
